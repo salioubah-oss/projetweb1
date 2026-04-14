@@ -1,0 +1,36 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <reseau type="3G">
+        <operateur>Free Mobile</operateur>
+        <technologie>UMTS</technologie>
+        <frequence>2100 MHz</frequence>
+
+        <equipements>
+            <nodeB id="N102">
+                <emplacement>Parcelles Assainies</emplacement>
+                <capacite>Haute</capacite>
+                <debitMax>7.2 Mbps</debitMax>
+            </nodeB>
+            <nodeB id="N103">
+                <emplacement>Grand Yoff</emplacement>
+                <capacite>Moyenne</capacite>
+                <debitMax>3.6 Mbps</debitMax>
+            </nodeB>
+
+            <rnc id="RNC-Sud">
+                <region>Dakar Sud</region>
+                <gestionnaire>RNC-SD01</gestionnaire>
+            </rnc>
+        </equipements>
+
+        <terminaux>
+            <terminal id="T301">Huawei U8800</terminal>
+            <terminal id="T302">Sony Ericsson K850i</terminal>
+            <terminal id="T303">HTC Desire</terminal>
+        </terminaux>
+
+        <services>
+            <service>Visiophonie</service>
+            <service>Internet Mobile</service>
+            <service>MMS</service>
+        </services>
+    </reseau>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+     <head>
+        <meta charset="UTF-8">
+        <title> GENERATION DE FOOTBALL </title>
+        <link rel="stylesheet" href="style1.css">
+
+     </head>
+
+   <body>
+      <header id="entete"> 
+        <span class="titre-principal">GENERATION DE FOOTBALL</span>
+        
+        <div class="reservation-header">
+            <div class="inputs-groupe">
+                <input type="text" id="res-nom" class="input-header" placeholder="Ton Nom">
+                <div class="datetime-groupe">
+                    <input type="date" id="res-date" class="input-header">
+                    <input type="time" id="res-heure" class="input-header">
+                </div>
+            </div>
+            <button class="btn-header-confirm" onclick="validerReservation()">Confirmer</button>
+        </div>
+    </header>
+      <nav id="menu">
+         <ul>
+               <li><a href="projet01.html"> CASTORS </a></li>
+               <li><a href="projet02.html" >  BOURGUIBA </a></li>
+               <li><a href="projet03.html"> SCATURBAM </a></li>
+               <li><a href="projet04.html"> DKR-SC  </a></li>
+               <li><a href="projet05.html" class="active-link"> HLM</a></li>
+               
+         </ul>
+      </nav>
+      <div id="corps">
+<h1 align="center"> BIENVENUE AU TERRAIN FOOT DE HLM</h1>
+      <p>MERCI DE NOUS CONTACTER POUR VOIR LES HEURES DISPONIBLE AVANT DE CONFIRMER VOTRE RESERVATION</p>  
+<a href="mailto:mamadousalioubah@esp.sn" target="_blank">SUPPORT CLIENT PAR MAIL OU AU 338271537 </a>
+<div id="zone-confirmation" style="display: none;"></div>
+
+        <div class="zone-terrains">
+            <div class="bloc-photo">
+                <h3>Terrain de Football</h3>
+                 <a href="images/hlm1.jpg" target="_self">
+                <img src="images/hlm1.jpg" class="photo-terrain"></a>
+            </div>
+            <div class="bloc-photo">
+                <h3>Terrain de basketball</h3>
+                 <a href="images/hlm2.png" target="_self">
+                <img src="images/hlm2.png"  class="photo-terrain"></a>
+            </div>
+            <div class="bloc-photo">
+                <h3>Terrain de Football</h3>
+                 <a href="images/scat2.jpeg" target="_self">
+                <img src="images/scat2.jpeg" class="photo-terrain"></a>
+            </div>
+        </div>
+    </div>
+
+    <footer> Copyright &copy;  GENERATION DE FOOT/BASKET</footer>
+
+    <script>
+    function validerReservation() {
+        let nom = document.getElementById('res-nom').value;
+        let date = document.getElementById('res-date').value;
+        let heure = document.getElementById('res-heure').value;
+        let zone = document.getElementById('zone-confirmation');
+
+        if (nom === "" || date === "" || heure === "") {
+            zone.style.display = "block";
+            zone.style.backgroundColor = "#f8d7da";
+            zone.style.color = "#721c24";
+            zone.innerHTML = "⚠️ Veuillez remplir tous les champs !";
+        } else {
+            zone.style.display = "block";
+            zone.style.backgroundColor = "#d4edda";
+            zone.style.color = "#155724";
+            zone.innerHTML = `✅ <strong>Merci ${nom} !</strong> Votre réservation pour le ${date} à ${heure} est reçue. Envoyez 10.000 FCFA par WAVE ou ORANGE-MONEY pour confirmer votre place au HLM.`;
+            
+            // Petit effet de nettoyage
+            setTimeout(() => {
+                document.getElementById('res-nom').value = "";
+            }, 2000);
+        }
+    }
+    </script>
+</body>
+</html>
+
